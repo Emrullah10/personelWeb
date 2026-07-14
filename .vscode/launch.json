@@ -1,0 +1,56 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API: service-portfolio",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/services/service-portfolio",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--watch", "main.js"],
+      "envFile": "${workspaceFolder}/services/service-portfolio/.env",
+      "env": {
+        "PORT": "4000",
+        "DB_HOST": "localhost",
+        "DB_PORT": "5432",
+        "DB_USER": "personel",
+        "DB_PASSWORD": "personel",
+        "DB_NAME": "personel_website",
+        "CORS_ORIGIN": "http://localhost:5173"
+      },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
+    },
+    {
+      "name": "Web: Chrome (localhost:5173)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/web-app/src",
+      "preLaunchTask": "web-app: dev server",
+      "sourceMapPathOverrides": {
+        "webpack:///./~/*": "${webRoot}/node_modules/*",
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///*": "*"
+      }
+    },
+    {
+      "name": "Vitest: core unit tests",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vitest", "run", "test/services/service-portfolio/unit"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack: API + Web",
+      "configurations": ["API: service-portfolio", "Web: Chrome (localhost:5173)"],
+      "stopAll": true
+    }
+  ]
+}

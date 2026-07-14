@@ -1,0 +1,12 @@
+@use '@styles/mixins' as *;
+
+.section {
+  @include section-spacing;
+}
+
+.body {
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+  max-width: 70ch;
+  line-height: 1.7;
+}

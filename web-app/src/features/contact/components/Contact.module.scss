@@ -1,0 +1,52 @@
+@use '@styles/mixins' as *;
+
+.section {
+  @include section-spacing;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-bottom: var(--space-8);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 560px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  label {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+    color: var(--color-text);
+    resize: vertical;
+    @include focus-ring;
+  }
+}
+
+.error {
+  color: #ef4444;
+  font-size: var(--fs-xs);
+}
+
+.success {
+  color: #22c55e;
+  font-size: var(--fs-sm);
+}

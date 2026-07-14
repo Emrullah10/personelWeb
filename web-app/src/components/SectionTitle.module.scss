@@ -1,0 +1,21 @@
+.wrapper {
+  margin-bottom: var(--space-12);
+}
+
+.eyebrow {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: var(--fs-3xl);
+
+  @media (max-width: 640px) {
+    font-size: var(--fs-2xl);
+  }
+}

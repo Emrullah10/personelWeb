@@ -1,23 +1,18 @@
 {
-  "name": "antigravity-kit",
-  "version": "2.0.0",
-  "description": "AI Agent templates - Skills, Agents, and Workflows for enhanced coding assistance",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vudovn/antigravity-kit.git"
-  },
-  "homepage": "https://github.com/vudovn/antigravity-kit#readme",
-  "bugs": {
-    "url": "https://github.com/vudovn/antigravity-kit/issues"
-  },
-  "keywords": [
-    "antigravity",
-    "ai",
-    "agent",
-    "gemini",
-    "skills",
-    "templates"
+  "name": "personel-website",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "core/*",
+    "services/*",
+    "packages/modules/*",
+    "web-app"
   ],
-  "author": "vudovn",
-  "license": "MIT"
+  "scripts": {
+    "dev:api": "npm run dev --workspace=service-portfolio",
+    "dev:web": "npm run dev --workspace=web-app",
+    "build:web": "npm run build --workspace=web-app",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  }
 }

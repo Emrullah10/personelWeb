@@ -1,0 +1,21 @@
+@use '@styles/mixins' as *;
+
+.toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-size: var(--fs-lg);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  @include focus-ring;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

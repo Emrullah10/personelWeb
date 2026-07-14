@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "greeting": "Merhaba, ben",
+    "name": "Emrullah Bozkurt",
+    "role": "Full Stack & Mobil Geliştirici",
+    "tagline": "Web ve mobilde temiz, yüksek performanslı ürünler geliştiriyorum — Node.js API'lerinden Flutter ve React uygulamalarına.",
+    "cta": "İletişime geç",
+    "secondaryCta": "Projeleri gör"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "body": "Bilgisayar Mühendisiyim ve çözüm odaklı bir geliştiriciyim. Mobil geliştirme (Flutter/Dart) ve Python eğitmenliğinden full-stack web çözümlerine (Node.js/React) doğru yeteneklerimi genişlettim. Clean Architecture, Agile metodolojiler ve sürdürülebilir, yüksek kaliteli kod önceliğimdir."
+  },
+  "skills": {
+    "title": "Yetenekler"
+  },
+  "experience": {
+    "title": "Deneyim"
+  },
+  "projects": {
+    "title": "Projeler",
+    "code": "Kod",
+    "live": "Canlı"
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Aklınızda bir proje mi var, yoksa sadece merhaba mı demek istiyorsunuz? Mesaj gönderin.",
+    "name": "İsim",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "send": "Mesaj gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Teşekkürler! Mesajınız gönderildi.",
+    "error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "validation": {
+      "name": "İsim en az 2 karakter olmalı",
+      "email": "Geçerli bir e-posta adresi girin",
+      "message": "Mesaj en az 10 karakter olmalı"
+    }
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  }
+}

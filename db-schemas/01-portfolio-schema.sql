@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS projects (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(200) NOT NULL,
+  description JSONB NOT NULL DEFAULT '{}',
+  tech_stack TEXT[] NOT NULL DEFAULT '{}',
+  github_url VARCHAR(500),
+  live_url VARCHAR(500),
+  image_url VARCHAR(500),
+  display_order INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS experiences (
+  id SERIAL PRIMARY KEY,
+  company VARCHAR(200) NOT NULL,
+  role JSONB NOT NULL DEFAULT '{}',
+  location VARCHAR(200),
+  period VARCHAR(100) NOT NULL,
+  bullets JSONB NOT NULL DEFAULT '{}',
+  display_order INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS skills (
+  id SERIAL PRIMARY KEY,
+  category VARCHAR(100) NOT NULL,
+  items TEXT[] NOT NULL DEFAULT '{}',
+  display_order INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS messages (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(200) NOT NULL,
+  email VARCHAR(200) NOT NULL,
+  body TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);

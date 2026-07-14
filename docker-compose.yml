@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: personel
+      POSTGRES_PASSWORD: personel
+      POSTGRES_DB: personel_website
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db-schemas:/docker-entrypoint-initdb.d
+
+volumes:
+  pgdata:

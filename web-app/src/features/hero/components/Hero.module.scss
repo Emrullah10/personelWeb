@@ -1,0 +1,52 @@
+@use '@styles/mixins' as *;
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top right, var(--color-accent-soft), transparent 60%);
+}
+
+.inner {
+  max-width: 720px;
+}
+
+.greeting {
+  font-size: var(--fs-lg);
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.name {
+  font-size: var(--fs-4xl);
+  line-height: 1.1;
+
+  @media (max-width: 640px) {
+    font-size: var(--fs-3xl);
+  }
+}
+
+.role {
+  font-size: var(--fs-xl);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-top: var(--space-2);
+}
+
+.tagline {
+  margin-top: var(--space-6);
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
