@@ -1,4 +1,7 @@
 {
+  "a11y": {
+    "skipToContent": "Skip to content"
+  },
   "nav": {
     "about": "About",
     "skills": "Skills",
@@ -10,13 +13,16 @@
     "greeting": "Hi, I'm",
     "name": "Emrullah Bozkurt",
     "role": "Full Stack & Mobile Developer",
-    "tagline": "I build clean, high-performance products across web and mobile — from Node.js APIs to Flutter and React apps.",
+    "location": "Ankara, Turkey",
+    "availability": "Open to new work",
+    "tagline": "In software since 2022 — I build clean, high-performance products across web and mobile, from Node.js APIs to Flutter and React apps.",
     "cta": "Get in touch",
     "secondaryCta": "View projects"
   },
   "about": {
     "title": "About me",
-    "body": "I'm a Computer Engineer and solution-oriented developer. I've broadened my skill set from mobile development (Flutter/Dart) and Python instruction to full-stack web solutions (Node.js/React). I care about Clean Architecture, Agile methodologies, and sustainable, high-quality code."
+    "body": "I'm a Computer Engineer and solution-oriented developer. I've broadened my skill set from <0>mobile development (Flutter/Dart)</0> and Python instruction to <0>full-stack web solutions (Node.js/React)</0>. I care about <0>Clean Architecture</0>, Agile methodologies, and sustainable, high-quality code.",
+    "languages": "Turkish (native) · English (B2) · German (A1)"
   },
   "skills": {
     "title": "Skills"
@@ -31,19 +37,8 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Have a project in mind or just want to say hi? Send a message.",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send message",
-    "sending": "Sending...",
-    "success": "Thanks! Your message has been sent.",
-    "error": "Something went wrong. Please try again.",
-    "validation": {
-      "name": "Name must be at least 2 characters",
-      "email": "Enter a valid email address",
-      "message": "Message must be at least 10 characters"
-    }
+    "subtitle": "Have a project in mind or just want to say hi? The fastest way to reach me is email.",
+    "status": "Open to new work"
   },
   "footer": {
     "rights": "All rights reserved."

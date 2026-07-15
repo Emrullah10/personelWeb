@@ -11,10 +11,13 @@ export const MainLayout = ({ children }) => {
 
   return (
     <>
+      <a href="#top" className={styles.skipLink}>
+        {t('a11y.skipToContent')}
+      </a>
       <header className={styles.header}>
         <Container className={styles.headerInner}>
-          <a href="#top" className={styles.logo}>
-            EB
+          <a href="#top" className={styles.logo} aria-label="Emrullah Bozkurt">
+            Emrullah Bozkurt
           </a>
           <nav className={styles.nav}>
             {NAV_SECTIONS.map((section) => (

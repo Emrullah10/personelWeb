@@ -1,3 +1,21 @@
+.skipLink {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+
+  &:focus-visible {
+    top: var(--space-4);
+  }
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -15,10 +33,24 @@
 }
 
 .logo {
-  font-family: var(--font-heading);
+  position: relative;
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
   font-weight: 700;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-2xl);
+  line-height: 1;
+  white-space: nowrap;
   text-decoration: none;
+  color: var(--color-text);
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  @media (max-width: 480px) {
+    font-size: var(--fs-xl);
+  }
 }
 
 .nav {

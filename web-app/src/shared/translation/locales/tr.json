@@ -1,4 +1,7 @@
 {
+  "a11y": {
+    "skipToContent": "İçeriğe geç"
+  },
   "nav": {
     "about": "Hakkımda",
     "skills": "Yetenekler",
@@ -10,13 +13,16 @@
     "greeting": "Merhaba, ben",
     "name": "Emrullah Bozkurt",
     "role": "Full Stack & Mobil Geliştirici",
-    "tagline": "Web ve mobilde temiz, yüksek performanslı ürünler geliştiriyorum — Node.js API'lerinden Flutter ve React uygulamalarına.",
+    "location": "Ankara, Türkiye",
+    "availability": "Yeni işlere açığım",
+    "tagline": "2022'den beri yazılım dünyasındayım — web ve mobilde temiz, yüksek performanslı ürünler geliştiriyorum: Node.js API'lerinden Flutter ve React uygulamalarına.",
     "cta": "İletişime geç",
     "secondaryCta": "Projeleri gör"
   },
   "about": {
     "title": "Hakkımda",
-    "body": "Bilgisayar Mühendisiyim ve çözüm odaklı bir geliştiriciyim. Mobil geliştirme (Flutter/Dart) ve Python eğitmenliğinden full-stack web çözümlerine (Node.js/React) doğru yeteneklerimi genişlettim. Clean Architecture, Agile metodolojiler ve sürdürülebilir, yüksek kaliteli kod önceliğimdir."
+    "body": "Bilgisayar Mühendisiyim ve çözüm odaklı bir geliştiriciyim. <0>Mobil geliştirme (Flutter/Dart)</0> ve Python eğitmenliğinden <0>full-stack web çözümlerine (Node.js/React)</0> doğru yeteneklerimi genişlettim. <0>Clean Architecture</0>, Agile metodolojiler ve sürdürülebilir, yüksek kaliteli kod önceliğimdir.",
+    "languages": "Türkçe (ana dil) · İngilizce (B2) · Almanca (A1)"
   },
   "skills": {
     "title": "Yetenekler"
@@ -31,19 +37,8 @@
   },
   "contact": {
     "title": "İletişim",
-    "subtitle": "Aklınızda bir proje mi var, yoksa sadece merhaba mı demek istiyorsunuz? Mesaj gönderin.",
-    "name": "İsim",
-    "email": "E-posta",
-    "message": "Mesaj",
-    "send": "Mesaj gönder",
-    "sending": "Gönderiliyor...",
-    "success": "Teşekkürler! Mesajınız gönderildi.",
-    "error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
-    "validation": {
-      "name": "İsim en az 2 karakter olmalı",
-      "email": "Geçerli bir e-posta adresi girin",
-      "message": "Mesaj en az 10 karakter olmalı"
-    }
+    "subtitle": "Aklınızda bir proje mi var, yoksa sadece merhaba mı demek istiyorsunuz? Bana ulaşmanın en hızlı yolu e-posta.",
+    "status": "Yeni işlere açığım"
   },
   "footer": {
     "rights": "Tüm hakları saklıdır."

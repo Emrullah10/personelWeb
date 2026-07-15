@@ -34,6 +34,19 @@ export const Hero = () => {
         >
           {t('hero.role')}
         </motion.h2>
+        <motion.div
+          className={styles.meta}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+        >
+          <span>{t('hero.location')}</span>
+          <span className={styles.metaDivider} />
+          <span className={styles.availability}>
+            <span className={styles.availabilityDot} />
+            {t('hero.availability')}
+          </span>
+        </motion.div>
         <motion.p
           className={styles.tagline}
           initial={{ opacity: 0, y: 16 }}

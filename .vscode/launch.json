@@ -18,7 +18,7 @@
         "DB_NAME": "personel_website",
         "CORS_ORIGIN": "http://localhost:5173"
       },
-      "console": "integratedTerminal",
+      "console": "internalConsole",
       "skipFiles": ["<node_internals>/**"],
       "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
     },

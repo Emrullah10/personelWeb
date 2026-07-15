@@ -1,25 +1,19 @@
-import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { Container } from '@components/Container';
 import { SectionTitle } from '@components/SectionTitle';
 import { Reveal } from '@components/Reveal';
-import { Button } from '@components/Button';
-import { useSendMessage } from '../hooks/useSendMessage';
 import styles from './Contact.module.scss';
+
+const EMAIL = 'emrullahbozkurt06@gmail.com';
+
+const SOCIAL_LINKS = [
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/dev-emrullah-bozkurt' },
+  { label: 'GitHub', href: 'https://github.com/Emrullah10' },
+  { label: 'CV', href: '/Emrullah_Bozkurt_CV.pdf', download: true },
+];
 
 export const Contact = () => {
   const { t } = useTranslation();
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
-  const { mutate, isPending, isSuccess, isError } = useSendMessage();
-
-  const onSubmit = (values) => {
-    mutate(values, { onSuccess: () => reset() });
-  };
 
   return (
     <section id="contact" className={styles.section}>
@@ -31,32 +25,32 @@ export const Contact = () => {
           <p className={styles.subtitle}>{t('contact.subtitle')}</p>
         </Reveal>
         <Reveal delay={0.2}>
-          <form className={styles.form} onSubmit={handleSubmit(onSubmit)} noValidate>
-            <div className={styles.field}>
-              <label htmlFor="name">{t('contact.name')}</label>
-              <input id="name" type="text" {...register('name', { required: true, minLength: 2 })} />
-              {errors.name && <span className={styles.error}>{t('contact.validation.name')}</span>}
-            </div>
-            <div className={styles.field}>
-              <label htmlFor="email">{t('contact.email')}</label>
-              <input
-                id="email"
-                type="email"
-                {...register('email', { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
-              />
-              {errors.email && <span className={styles.error}>{t('contact.validation.email')}</span>}
-            </div>
-            <div className={styles.field}>
-              <label htmlFor="body">{t('contact.message')}</label>
-              <textarea id="body" rows={5} {...register('body', { required: true, minLength: 10 })} />
-              {errors.body && <span className={styles.error}>{t('contact.validation.message')}</span>}
-            </div>
-            <Button type="submit" variant="primary" disabled={isPending}>
-              {isPending ? t('contact.sending') : t('contact.send')}
-            </Button>
-            {isSuccess && <p className={styles.success}>{t('contact.success')}</p>}
-            {isError && <p className={styles.error}>{t('contact.error')}</p>}
-          </form>
+          <a href={`mailto:${EMAIL}`} className={styles.emailLink}>
+            {EMAIL}
+          </a>
+        </Reveal>
+        <Reveal delay={0.3}>
+          <div className={styles.status}>
+            <span className={styles.statusDot} />
+            {t('contact.status')}
+          </div>
+        </Reveal>
+        <Reveal delay={0.4}>
+          <div className={styles.socials}>
+            {SOCIAL_LINKS.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.download ? undefined : '_blank'}
+                rel={link.download ? undefined : 'noreferrer'}
+                download={link.download}
+                className={styles.socialLink}
+              >
+                {link.label}
+                <span className={styles.arrow}>→</span>
+              </a>
+            ))}
+          </div>
         </Reveal>
       </Container>
     </section>

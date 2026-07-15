@@ -9,4 +9,15 @@
   color: var(--color-text-muted);
   max-width: 70ch;
   line-height: 1.7;
+
+  strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+}
+
+.languages {
+  margin-top: var(--space-4);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
 }

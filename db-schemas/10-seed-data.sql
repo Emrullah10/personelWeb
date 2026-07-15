@@ -1,7 +1,7 @@
 INSERT INTO skills (category, items, display_order) VALUES
   ('Mobile', ARRAY['Flutter', 'React Native', 'Dart', 'Riverpod', 'Clean Architecture', 'MVVM'], 1),
   ('Web & Backend', ARRAY['Node.js', 'Express.js', 'React', 'JavaScript', 'SQL', 'REST API'], 2),
-  ('Tools & Methods', ARRAY['Git', 'CI/CD', 'Figma', 'UI/UX Design', 'Agile/Scrum', 'TDD'], 3);
+  ('Tools & Methods', ARRAY['Git', 'CI/CD', 'Figma', 'UI/UX Design', 'Agile/Scrum', 'TDD', 'AI-assisted development'], 3);
 
 INSERT INTO experiences (company, role, location, period, bullets, display_order) VALUES
   ('Poetas',

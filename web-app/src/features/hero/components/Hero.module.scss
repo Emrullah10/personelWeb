@@ -19,7 +19,9 @@
 }
 
 .name {
+  font-family: var(--font-heading);
   font-size: var(--fs-4xl);
+  font-weight: 700;
   line-height: 1.1;
 
   @media (max-width: 640px) {
@@ -32,6 +34,37 @@
   color: var(--color-text-muted);
   font-weight: 500;
   margin-top: var(--space-2);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.metaDivider {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.availabilityDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #22c55e 25%, transparent);
 }
 
 .tagline {
