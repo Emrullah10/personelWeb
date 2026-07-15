@@ -9,7 +9,6 @@ const EMAIL = 'emrullahbozkurt06@gmail.com';
 const SOCIAL_LINKS = [
   { label: 'LinkedIn', href: 'https://linkedin.com/in/dev-emrullah-bozkurt' },
   { label: 'GitHub', href: 'https://github.com/Emrullah10' },
-  { label: 'CV', href: '/Emrullah_Bozkurt_CV.pdf', download: true },
 ];
 
 export const Contact = () => {
