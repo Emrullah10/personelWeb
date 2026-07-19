@@ -33,7 +33,9 @@
   "projects": {
     "title": "Projects",
     "code": "Code",
-    "live": "Live"
+    "live": "Live",
+    "close": "Close",
+    "gallery": "Screenshots"
   },
   "contact": {
     "title": "Contact",

@@ -4,3 +4,6 @@ export const API_PATHS = {
   skills: '/api/skills',
   messages: '/api/messages',
 };
+
+export const projectImageUrl = (projectId, imageId) =>
+  `${API_PATHS.projects}/${projectId}/images/${imageId}`;

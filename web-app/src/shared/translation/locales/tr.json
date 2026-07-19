@@ -33,7 +33,9 @@
   "projects": {
     "title": "Projeler",
     "code": "Kod",
-    "live": "Canlı"
+    "live": "Canlı",
+    "close": "Kapat",
+    "gallery": "Ekran Görüntüleri"
   },
   "contact": {
     "title": "İletişim",

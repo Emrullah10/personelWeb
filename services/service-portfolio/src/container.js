@@ -1,10 +1,12 @@
 import pg from 'pg';
 import { datasourceConfig } from '../configs/datasource-config.js';
 import { makeProjectRepository } from '@personel/core-portfolio/infrastructure/persistence/repositories/project.repository.js';
+import { makeProjectImageRepository } from '@personel/core-portfolio/infrastructure/persistence/repositories/project-image.repository.js';
 import { makeExperienceRepository } from '@personel/core-portfolio/infrastructure/persistence/repositories/experience.repository.js';
 import { makeSkillRepository } from '@personel/core-portfolio/infrastructure/persistence/repositories/skill.repository.js';
 import { makeMessageRepository } from '@personel/core-portfolio/infrastructure/persistence/repositories/message.repository.js';
 import { makeListProjects } from '@personel/core-portfolio/application/use-cases/list-projects.use-case.js';
+import { makeGetProjectImage } from '@personel/core-portfolio/application/use-cases/get-project-image.use-case.js';
 import { makeListExperiences } from '@personel/core-portfolio/application/use-cases/list-experiences.use-case.js';
 import { makeListSkills } from '@personel/core-portfolio/application/use-cases/list-skills.use-case.js';
 import { makeCreateMessage } from '@personel/core-portfolio/application/use-cases/create-message.use-case.js';
@@ -17,6 +19,7 @@ export const buildContainer = ({ pool = new Pool(datasourceConfig) } = {}) => {
 
   const repos = {
     projectRepo: makeProjectRepository({ query }),
+    projectImageRepo: makeProjectImageRepository({ query }),
     experienceRepo: makeExperienceRepository({ query }),
     skillRepo: makeSkillRepository({ query }),
     messageRepo: makeMessageRepository({ query }),
@@ -25,6 +28,7 @@ export const buildContainer = ({ pool = new Pool(datasourceConfig) } = {}) => {
   return {
     pool,
     listProjects: makeListProjects(repos),
+    getProjectImage: makeGetProjectImage(repos),
     listExperiences: makeListExperiences(repos),
     listSkills: makeListSkills(repos),
     createMessage: wrapWithHttpTranslation(makeCreateMessage(repos)),

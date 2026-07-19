@@ -1,5 +1,8 @@
 import { httpClient } from './httpClient';
-import { API_PATHS } from '@shared/constant/api-paths';
+import { API_PATHS, projectImageUrl } from '@shared/constant/api-paths';
+
+export const getProjectImageUrl = (projectId, imageId) =>
+  `${httpClient.defaults.baseURL}${projectImageUrl(projectId, imageId)}`;
 
 export const fetchProjects = async () => {
   const { data } = await httpClient.get(API_PATHS.projects);
