@@ -24,6 +24,7 @@ export const buildPortfolioRoutes = (container) => {
         'Content-Type': mimeType,
         'Cache-Control': 'public, max-age=31536000, immutable',
         'Content-Length': image.length,
+        'Cross-Origin-Resource-Policy': 'cross-origin',
       });
       res.send(image);
     } catch (err) {
