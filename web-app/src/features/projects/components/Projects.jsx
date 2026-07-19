@@ -75,6 +75,16 @@ export const Projects = () => {
                           {t('projects.live')}
                         </a>
                       )}
+                      {project.mobile_url && (
+                        <a
+                          href={project.mobile_url}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(event) => event.stopPropagation()}
+                        >
+                          {t('projects.mobile')}
+                        </a>
+                      )}
                     </div>
                   </motion.article>
                 </Reveal>

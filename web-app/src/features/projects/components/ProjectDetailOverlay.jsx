@@ -79,6 +79,11 @@ export const ProjectDetailOverlay = ({ project, onClose }) => {
                 {t('projects.live')}
               </a>
             )}
+            {project.mobile_url && (
+              <a href={project.mobile_url} target="_blank" rel="noreferrer">
+                {t('projects.mobile')}
+              </a>
+            )}
           </div>
         </div>
       </motion.article>
